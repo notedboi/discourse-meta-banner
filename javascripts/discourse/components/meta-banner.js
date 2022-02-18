@@ -1,14 +1,19 @@
 import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import { inject as service } from "@ember/service";
+import { computed } from "@ember/object";
 
 export default Component.extend({
   router: service(),
 
+  bannerLinks: computed(function () {
+    return JSON.parse(settings.banner_links);
+  }),
+
   @discourseComputed("currentUser")
   shouldShow(currentUser) {
 
-    return !currentUser
+    return currentUser
     const isStaff = currentUser && currentUser.staff;
     const lowTrustLevel = currentUser && currentUser.trust_level < 2;
     // show banner only for anons and < TL 2

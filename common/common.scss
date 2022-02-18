@@ -32,7 +32,8 @@
     .featured-todo {
       background: var(--secondary);
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
 
       svg {
         transition: color 0.25s;
@@ -89,6 +90,7 @@
       max-width: 375px;
       text-align: left;
       padding: 2.5em 2em 3em;
+      align-self: center;
 
       h2 {
       }
@@ -122,10 +124,10 @@
     }
 
     @media screen and (min-width: 550px) {
-      .featured-todo > div:nth-of-type(2) a {
-        border-left: 1px solid var(--primary-low);
-        border-right: 1px solid var(--primary-low);
-      }
+      // .featured-todo > div:nth-of-type(2) a {
+      //   border-left: 1px solid var(--primary-low);
+      //   border-right: 1px solid var(--primary-low);
+      // }
     }
 
     @media screen and (max-width: 550px) {
@@ -153,10 +155,10 @@
             padding: 0.5em;
           }
 
-          &:nth-of-type(2) {
-            border-left: 1px solid var(--primary-low);
-            border-right: 1px solid var(--primary-low);
-          }
+          // &:nth-of-type(2) {
+          //   border-left: 1px solid var(--primary-low);
+          //   border-right: 1px solid var(--primary-low);
+          // }
         }
       }
     }
