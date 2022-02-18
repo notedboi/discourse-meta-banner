@@ -14,7 +14,7 @@
       // background-size: cover;
       background-position-x: right;
       background-position-y: bottom;
-      padding: 2em 0 0;
+      // padding: 2em 0 0;
     }
   }
 
@@ -25,7 +25,8 @@
     justify-content: center;
     box-shadow: shadow("card");
     max-width: 930px;
-    margin: 2em auto 0.5em;
+    // margin: 2em auto 0.5em;
+    margin: 0 auto;
     background: var(--secondary);
 
     .featured-todo {
