@@ -26,13 +26,13 @@ second_label:
 second_link:
   default: "/tags"
   type: "string"
-thrid_icon:
+third_icon:
   default: "glass-cheers"
   type: "string"
-thrid_label:
+third_label:
   default: ""
   type: "string"
-thrid_link:
+third_link:
   default: ""
 
 
