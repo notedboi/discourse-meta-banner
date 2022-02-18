@@ -1,4 +1,38 @@
 svg_icons:
-  default: "palette|fab-discourse|glass-cheers"
+  default: "palette|glass-cheers"
   type: "list"
   list_type: "compact"
+welcome:
+  default: ""
+  type: "string"
+subtitle:
+  default: ""
+  type: "string"
+first_icon:
+  default: "info-circle"
+  type: "string"
+first_label:
+  default: ""
+  type: "string"
+first_link:
+  default: "/tags"
+  type: "string"
+second_icon:
+  default: "tags"
+  type: "string"
+second_label:
+  default: ""
+  type: "string"
+second_link:
+  default: "/tags"
+  type: "string"
+thrid_icon:
+  default: "glass-cheers"
+  type: "string"
+thrid_label:
+  default: ""
+  type: "string"
+thrid_link:
+  default: ""
+
+

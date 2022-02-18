@@ -3,27 +3,26 @@
     <div class="wrap custom-homepage">
       <div class="welcome-wrapper">
         <div class="welcome-content">
-          <h2>{{theme-i18n "meta_banner.welcome"}}</h2>
-          <p>{{theme-i18n "meta_banner.subtitle"}}</p>
+          <h2>{{theme-setting 'welcome'}}</h2>
+          <p>{{theme-setting 'subtitle'}}</p>
         </div>
         <div class="featured-todo">
           <div>
-            <a href="/about">
-              <h3>{{d-icon "info-circle"}}
-                {{theme-i18n "meta_banner.docs"}}</h3>
+            <a href="{{theme-setting 'first_link'}}">
+              <h3> {{d-icon (theme-setting 'first_icon') }}
+               {{theme-setting 'first_label'}}</h3>
             </a>
           </div>
           <div>
-            <a href="/tags">
-              <h3>{{d-icon "tags"}}
-                {{theme-i18n "meta_banner.themes"}}</h3>
+            <a href="{{theme-setting 'second_link'}}">
+             <h3> {{d-icon (theme-setting 'second_icon') }}
+               {{theme-setting 'second_label'}}</h3>
             </a>
           </div>
           <div>
-            <a href="">
-              <h3>
-                {{d-icon "glass-cheers"}}
-                {{theme-i18n "meta_banner.hosting"}}</h3>
+             <a href="{{theme-setting 'third_link'}}">
+              <h3> {{d-icon (theme-setting 'thrid_icon') }}
+                 {{theme-setting 'thrid_label'}}</h3>
             </a>
           </div>
         </div>
