@@ -8,7 +8,8 @@ export default Component.extend({
   @discourseComputed("currentUser")
   shouldShow(currentUser) {
 
-    return currentUser
+    return 
+    !currentUser
     const isStaff = currentUser && currentUser.staff;
     const lowTrustLevel = currentUser && currentUser.trust_level < 2;
     // show banner only for anons and < TL 2
