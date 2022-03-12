@@ -2,7 +2,7 @@ import Component from "@ember/component";
 import discourseComputed from "discourse-common/utils/decorators";
 import { inject as service } from "@ember/service";
 import { computed } from "@ember/object";
-
+import { defaultHomepage } from "discourse/lib/utilities";
 export default Component.extend({
   router: service(),
 
@@ -11,17 +11,30 @@ export default Component.extend({
   }),
 
   @discourseComputed("currentUser")
-  shouldShow(currentUser) {
+  showTrust(currentUser) {
+    return (
+      (currentUser && currentUser.trust_level <= settings.max_trust_level) ||
+      (!currentUser && !settings.hide_for_anon)
+    );
+  },
 
-    return !currentUser
-    const isStaff = currentUser && currentUser.staff;
-    const lowTrustLevel = currentUser && currentUser.trust_level < 2;
-    // show banner only for anons and < TL 2
-    return !isStaff && (!currentUser || lowTrustLevel);
+  @discourseComputed("currentUser")
+  hideStaff(currentUser) {
+    return currentUser && currentUser.staff && settings.hide_for_staff;
   },
 
   @discourseComputed("router.currentRouteName", "router.currentURL")
-  discoveryRoute(currentRouteName, currentURL) {
-    return currentRouteName.indexOf("discovery") > -1;
+  showHere(currentRouteName, currentURL) {
+    if (settings.show_on === "all") {
+      return true;
+    }
+
+    if (settings.show_on === "discovery") {
+      return currentRouteName.indexOf("discovery") > -1;
+    }
+
+    if (settings.show_on === "homepage") {
+      return currentRouteName == `discovery.${defaultHomepage()}`;
+    }
   },
 });

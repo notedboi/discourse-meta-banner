@@ -1,20 +1,15 @@
 .below-site-header-outlet.banner-connector {
   .custom-homepage-wrapper {
     background: url($bg-pattern) repeat top center/49px 77px;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: center center;
     background-position-x: right;
     background-position-y: bottom;
     padding: 2em 0;
     margin-top: 1em;
-    // background-color:rgba(38,196,187,.8);
-    background-color:rgba(209, 197, 87, 0.8);
+    background-color: rgba(209, 197, 87, 0.8);
+
     @media screen and (max-width: 900px) {
-      // background-size: cover;
       background-position-x: right;
       background-position-y: bottom;
-      // padding: 2em 0 0;
     }
   }
 
@@ -29,7 +24,7 @@
     margin: 0 auto;
     background: var(--secondary);
 
-    .featured-todo {
+    .featured-banner-link {
       background: var(--secondary);
       display: flex;
       justify-content: center;
@@ -39,7 +34,7 @@
         transition: color 0.25s;
       }
 
-      > div {
+      >div {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -56,18 +51,20 @@
           transition: all 0.25s;
           width: 100%;
           padding: 2em;
-          color: var(--primary);
+          color: #{$banner-text-color};
 
           .d-icon {
-            color: var(--primary-high);
+            color: #{$banner-icon-color};
             margin-bottom: 0.35em;
           }
 
           &:hover {
-            color: var(--tertiary);
+            color: #{$banner-link-color};
             text-decoration: underline;
+
             .d-icon {
               color: var(--tertiary);
+              color: #{$banner-link-color};
             }
           }
         }
@@ -92,8 +89,7 @@
       padding: 2.5em 2em 3em;
       align-self: center;
 
-      h2 {
-      }
+      h2 {}
 
       p {
         margin-bottom: 0;
@@ -114,7 +110,7 @@
         padding: 1em;
       }
 
-      .featured-todo {
+      .featured-banner-link {
         padding: 0 0 2em;
       }
     }
@@ -124,7 +120,7 @@
     }
 
     @media screen and (min-width: 550px) {
-      // .featured-todo > div:nth-of-type(2) a {
+      // .featured-banner-link > div:nth-of-type(2) a {
       //   border-left: 1px solid var(--primary-low);
       //   border-right: 1px solid var(--primary-low);
       // }
@@ -134,11 +130,11 @@
       max-width: 80%;
       padding: 0;
 
-      .featured-todo {
+      .featured-banner-link {
         padding: 0.5em;
         flex-grow: 1;
 
-        > div {
+        >div {
           width: 50px;
           margin: 0 auto;
 

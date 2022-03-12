@@ -1,3 +1,40 @@
+show_on:
+  default: discovery
+  type: enum
+  choices:
+    - discovery
+    - homepage
+    - all
+  description: discovery refers to topic list pages
+
+max_trust_level:
+  type: integer
+  default: 1
+  max: 5
+  description: Show for this trust level and below; set 5 for all
+
+hide_for_staff:
+  default: false
+
+hide_on_mobile:
+  default: false
+
+hide_for_anon:
+  default: false
+  description: hide the banner for logged-out users
+
+banner_text_color:
+  type: string
+  default: "var(--primary)"
+
+banner_icon_color:
+  type: string
+  default: "var(--primary-high)"
+
+banner_link_color:
+  type: string
+  default: "var(--tertiary)"
+
 svg_icons:
   default: "palette|glass-cheers"
   type: "list"
