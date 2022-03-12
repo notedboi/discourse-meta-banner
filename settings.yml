@@ -44,6 +44,7 @@ welcome:
   type: "string"
 subtitle:
   default: ""
+  textarea: true
   type: "string"
 banner_links:
   default: >-
