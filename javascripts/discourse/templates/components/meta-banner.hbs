@@ -5,8 +5,8 @@
         <div class="wrap custom-homepage">
           <div class="welcome-wrapper">
             <div class="welcome-content">
-               <h2>{{html-safe theme-setting 'welcome'}}</h2>
-               <p>{{html-safe theme-setting 'subtitle'}}</p>
+               <h2>{{html-safe (theme-setting 'welcome')}}</h2>
+               <p>{{html-safe (theme-setting 'subtitle')}}</p>
             </div>
             <div class="featured-banner-link">
               {{#each bannerLinks as |bl|}}
